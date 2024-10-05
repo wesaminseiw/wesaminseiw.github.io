@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesam Inseiw | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Wesam Inseiw</h1>
+            <p>Mobile App Developer | Dart & Flutter | Python</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <p>If you have any questions or just want to get in touch, feel free to send me a message!</p>
+
+                <form id="contactForm">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Contact me at <a href="mailto:wesam.inseiw99@gmail.com">wesam.inseiw99@gmail.com</a></p>
+            <ul class="socials">
+                <li><a href="https://linkedin.com/in/wesaminseiw" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/wesaminseiw" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
+
+        var formData = new FormData(this);
+
+        fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            alert(result); // Show the result message from the PHP script
+            document.getElementById('contactForm').reset(); // Optional: Clear the form
+        })
+        .catch(error => {
+            alert('Error sending message. Please try again.');
+            console.error('Error:', error);
+        });
+    });
+    </script>
+</body>
+</html>
