@@ -45,7 +45,7 @@
             }
 
             100% {
-                background-image: url('images/bg1.jpg');
+                background-image: url('images/bg5.jpg');
             }
         }
 
@@ -89,11 +89,13 @@
             padding: 0;
         }
 
+        /* General styles for list items in nav */
         nav ul li {
             margin: 0 1rem;
         }
 
-        nav ul li a {
+        /* Styles for all links on the page */
+        a {
             color: #fff;
             text-decoration: none;
             font-size: 1.1rem;
@@ -101,14 +103,30 @@
             transition: color 0.3s ease;
         }
 
-        nav ul li a:hover {
+        .resume {
+            height: 100px;
+            color: #000;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .resume:hover {
+            color: #666;
+        }
+
+        /* Hover effect for all links */
+        a:hover {
             color: #ffeb3b;
         }
 
-        nav ul li a.active {
+        /* Active class for all links */
+        a.active {
             color: #ffeb3b;
             border-bottom: 2px solid #ffeb3b;
         }
+
 
         header.sticky {
             position: fixed;
@@ -848,6 +866,34 @@
         .python-badge {
             background-image: url('https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/python.png');
         }
+
+        .resume-btn {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #f44336;
+            /* Bright color to catch attention */
+            color: #fff;
+            /* Dark text for contrast */
+            padding: 0.75rem 1.5rem;
+            /* Padding to make it look like a button */
+            border-radius: 5px;
+            /* Rounded corners */
+            font-size: 1.1rem;
+            /* Slightly larger font */
+            font-weight: bold;
+            /* Make the text bold */
+            text-decoration: none;
+            /* Remove underline */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Smooth hover effect */
+        }
+
+        .resume-btn:hover {
+            background-color: #9f0f05;
+            /* Darken the button on hover */
+            color: #fff;
+            /* Change text color on hover */
+        }
     </style>
 </head>
 
@@ -890,7 +936,8 @@
                     improvement and growth. Always striving for excellence, I am enthusiastic about embracing new
                     challenges and opportunities to enhance my expertise and contribute effectively to every project.
                 </p>
-
+                <a class="resume-btn" href="https://github.com/wesaminseiw/resume/blob/main/cv.pdf" target="_blank">My
+                    Resume</a>
             </div>
         </section>
         <section id="skills">
@@ -976,7 +1023,7 @@
                         </div>
                     </div>
                     <div class="project-card">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/refs/heads/main/images/appicons/expensium_icon.png"
+                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/refs/heads/main/images/appicons/expensium_logo.png"
                             alt="Expensium icon">
                         <div class="project-info">
                             <h3>Expensium</h3>
