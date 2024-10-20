@@ -52,7 +52,7 @@
 
         /* Header */
         header {
-            background: #42A5F5;
+            background: #272727;
             /* Solid color or gradient */
             color: #fff;
             padding: 1rem 2rem;
@@ -577,7 +577,7 @@
 
         /* General Header Styles */
         header {
-            background: #42A5F5;
+            background: #272727;
             color: #fff;
             padding: 1rem 2rem;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -595,7 +595,7 @@
         .header-shrink {
             height: 40px;
             padding: 0.5rem 1rem;
-            background: #42A5F5;
+            background: #272727;
             flex-direction: row;
             justify-content: space-between;
             transition: height 0.3s ease, padding 0.3s ease, background 0.3s ease;
@@ -903,16 +903,85 @@
         .mobile-app-developer-text {
             font-weight: 600;
         }
+
+        .carousel-container {
+            margin: 30px;
+            overflow-x: scroll;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.3s ease;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-right: 10px;
+            margin-bottom: 30px;
+        }
+
+        .carousel-item {
+            min-width: 200px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .carousel img {
+            width: 100px;
+            height: auto;
+        }
+
+        .carousel a {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #42A5F5;
+            width: 110px;
+            height: 25px;
+            /* Bright color to catch attention */
+            color: #fff;
+            /* Dark text for contrast */
+            padding: 0.75rem 1.5rem;
+            /* Padding to make it look like a button */
+            border-radius: 5px;
+            /* Rounded corners */
+            font-size: 1rem;
+            /* Slightly larger font */
+            font-weight: bold;
+            /* Make the text bold */
+            text-decoration: none;
+            /* Remove underline */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Smooth hover effect */
+        }
+
+        .carousel a:hover {
+            background-color: #107bd3;
+            /* Darken the button on hover */
+            color: #fff;
+            /* Change text color on hover */
+        }
+
+        .flutter-projects h2 {
+            margin-left: 30px;
+        }
     </style>
 </head>
 
 <body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            loop: true,
+        });
+    </script>
     <header>
-        <!-- <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/icons/logo-mini-light.png"
-            alt="Logo" class="header-logo centered"> -->
         <div class="header-left">
             <h1>
-                <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/icons/logo-light.png"
+                <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/icons/logo-alt.png"
                     alt="Wesam Inseiw" class="wesaminseiw-full-logo">
             </h1>
             <p class="mobile-app-developer-text">Mobile App Developer</p>
@@ -928,8 +997,6 @@
             </nav>
         </div>
     </header>
-
-
     <main>
         <section id="about">
             <div id="text-container" class="text-container">
@@ -999,87 +1066,77 @@
                 </div>
             </div>
         </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/gallerium_icon.png"
-                            alt="Gallerium icon">
-                        <div class="project-info">
-                            <h3>Gallerium</h3>
-                            <p>Gallerium for uploading photos and store it. Used Dart & Flutter, Firebase and Figma for
-                                designing.</p>
-                            <a href="https://github.com/wesaminseiw/gallerium-2323" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mychat_icon.png"
-                            alt="MyChat icon">
-                        <div class="project-info">
-                            <h3>MyChat</h3>
-                            <p>Chat with your friends with MyChat! Used Dart & Flutter, Firebase and Figma for enhanced
-                                designing.</p>
-                            <a href="https://github.com/wesaminseiw/mychat-87e50" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mee_notes_icon.png"
-                            alt="MeeNotes icon">
-                        <div class="project-info">
-                            <h3>MeeNotes</h3>
-                            <p>If you want to save your notes in a easy way, then use MeeNotes! Used Dart & Flutter and
-                                SQFLite.</p>
-                            <a href="https://github.com/wesaminseiw/mee-notes-9999" target="_blank">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
+        <section class="flutter-projects">
+            <h2>Flutter Projects</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
                         <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/refs/heads/main/images/appicons/expensium_logo.png"
-                            alt="Expensium icon">
-                        <div class="project-info">
-                            <h3>Expensium</h3>
-                            <p>Track your incomes and expenses with Expensium. Focused mostly at BLoC. The project is
-                                built also using Dart & Flutter and Firebase.</p>
-                            <a href="https://github.com/wesaminseiw/expensium-1887c" target="_blank">View Project</a>
-                        </div>
+                            alt="Expensium">
+                        <p>Expensium</p>
+                        <a href="https://github.com/wesaminseiw/expensium-1887c" target="_blank">View Project</a>
                     </div>
-                    <div class="project-card">
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/gallerium_icon.png"
+                            alt="Gallerium">
+                        <p>Gallerium</p>
+                        <a href="https://github.com/wesaminseiw/gallerium-2323" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mychat_icon.png"
+                            alt="MyChat">
+                        <p>MyChat</p>
+                        <a href="https://github.com/wesaminseiw/mychat-87e50" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mee_notes_icon.png"
+                            alt="MeeNotes">
+                        <p>MeeNotes</p>
+                        <a href="https://github.com/wesaminseiw/mee-notes-9999" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
                         <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mynotes_icon.png"
-                            alt="MyNotes icon">
-                        <div class="project-info">
-                            <h3>MyNotes</h3>
-                            <p>Modern design with advanced Firebase in MyNotes. Used Dart & Flutter and advanced
-                                Firebase.</p>
-                            <a href="https://github.com/wesaminseiw/mynotes-flutter2928" target="_blank">View
-                                Project</a>
-                        </div>
+                            alt="MyNotes">
+                        <p>MyNotes</p>
+                        <a href="https://github.com/wesaminseiw/mynotes-flutter2928" target="_blank">View Project</a>
                     </div>
-                    <div class="project-card">
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
                         <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/expenses_tracker_icon.png"
-                            alt="Expenses Tracker icon">
-                        <div class="project-info">
-                            <h3>Expenses Tracker</h3>
-                            <p>Track your incomes and expenses with Expenses Tracker. Used Dart & Flutter, Firebase,
-                                Figma for incredible design.</p>
-                            <a href="https://github.com/wesaminseiw/expenses-tracker-1234c" target="_blank">View
-                                Project</a>
-                        </div>
+                            alt="Expenses Tracker">
+                        <p>Expenses Tracker</p>
+                        <a href="https://github.com/wesaminseiw/expenses-tracker-1234c" target="_blank">View Project</a>
                     </div>
-                    <div class="project-card">
+                </div>
+                <div class="carousel">
+                    <div class="carousel-item">
                         <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/flutter_breaking_icon.png"
-                            alt="Flutter Breaking icon">
-                        <div class="project-info">
-                            <h3>Flutter Breaking</h3>
-                            <p>A simple app to view characters of Breaking Bad series. Used Dart & Flutter, APIs and
-                                BLoC.</p>
-                            <a href="https://github.com/wesaminseiw/flutter-breaking-9999" target="_blank">View
-                                Project</a>
-                        </div>
+                            alt="Flutter Breaking">
+                        <p>Flutter Breaking</p>
+                        <a href="https://github.com/wesaminseiw/flutter-breaking-9999" target="_blank">View Project</a>
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <!-- <section id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    
+                </div>
+            </div>
+        </section> -->
 
         <section id="contact">
             <div class="text-container2">
