@@ -118,13 +118,13 @@
 
         /* Hover effect for all links */
         a:hover {
-            color: #ffeb3b;
+            color: #42A5F5;
         }
 
         /* Active class for all links */
         a.active {
-            color: #ffeb3b;
-            border-bottom: 2px solid #ffeb3b;
+            color: #42A5F5;
+            border-bottom: 2px solid #42A5F5;
         }
 
 
@@ -297,6 +297,27 @@
             color: #ffffff;
         }
 
+        .projects-container {
+            text-align: left;
+            background-color: #fff;
+            margin-left: 0;
+            border-radius: 12px;
+            /* Remove any left margin */
+            display: inline-block;
+            /* Adjust width to content */
+            padding: 10px;
+            /* Optional: Adds padding inside the container */
+        }
+
+
+        .projects-container h3 {
+            margin: 0;
+            color: #272727;
+            font-size: 1.5rem;
+        }
+
+
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -437,7 +458,7 @@
 
         /* Footer */
         footer {
-            background: #333;
+            background: #272727;
             color: #fff;
             text-align: center;
             padding: 2rem 0;
@@ -468,7 +489,7 @@
         }
 
         footer .socials li a:hover {
-            color: #ffeb3b;
+            color: #42A5F5;
         }
 
 
@@ -722,7 +743,7 @@
 
         nav ul li a:hover {
             background-color: null;
-            color: #ffbf34;
+            color: #42A5F5;
         }
 
 
@@ -813,6 +834,13 @@
             /* Kotlin color */
         }
 
+        .highlight-illustrator {
+            font-weight: bold;
+            color: #dd7a00;
+            /* Illustrator */
+        }
+
+
         /* Icon Styling */
         .highlight-icon {
             display: inline-block;
@@ -860,6 +888,10 @@
 
         .python-badge {
             background-image: url('https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/icons/python.png');
+        }
+
+        .illustrator-badge {
+            background-image: url('https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/icons/adobe-illustrator.png');
         }
 
         .resume-btn {
@@ -1014,6 +1046,8 @@
                     passionate about crafting dynamic, user-centric applications and am committed to continuous
                     improvement and growth. Always striving for excellence, I am enthusiastic about embracing new
                     challenges and opportunities to enhance my expertise and contribute effectively to every project.
+                    I also have experience with <span class="highlight-icon illustrator-badge"></span><span
+                        class="highlight-illustrator">Adobe Illustrator</span>.
                 </p>
                 <a class="resume-btn" href="https://github.com/wesaminseiw/resume/blob/main/cv.pdf" target="_blank">My
                     Resume</a>
@@ -1066,78 +1100,111 @@
                 </div>
             </div>
         </section>
-        <section class="flutter-projects">
-            <h2>Flutter Projects</h2>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/refs/heads/main/images/appicons/expensium_logo.png"
-                            alt="Expensium">
-                        <p>Expensium</p>
-                        <a href="https://github.com/wesaminseiw/expensium-1887c" target="_blank">View Project</a>
+        <section id="projects">
+            <h2>Projects</h2>
+            <section class="flutter-projects">
+                <div class="projects-container">
+                    <h3>Flutter Projects</h3>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/refs/heads/main/images/appicons/expensium_logo.png"
+                                alt="Expensium">
+                            <p>Expensium</p>
+                            <a href="https://github.com/wesaminseiw/expensium-1887c" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/gallerium_icon.png"
+                                alt="Gallerium">
+                            <p>Gallerium</p>
+                            <a href="https://github.com/wesaminseiw/gallerium-2323" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mychat_icon.png"
+                                alt="MyChat">
+                            <p>MyChat</p>
+                            <a href="https://github.com/wesaminseiw/mychat-87e50" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mee_notes_icon.png"
+                                alt="MeeNotes">
+                            <p>MeeNotes</p>
+                            <a href="https://github.com/wesaminseiw/mee-notes-9999" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mynotes_icon.png"
+                                alt="MyNotes">
+                            <p>MyNotes</p>
+                            <a href="https://github.com/wesaminseiw/mynotes-flutter2928" target="_blank">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/expenses_tracker_icon.png"
+                                alt="Expenses Tracker">
+                            <p>Expenses Tracker</p>
+                            <a href="https://github.com/wesaminseiw/expenses-tracker-1234c" target="_blank">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/flutter_breaking_icon.png"
+                                alt="Flutter Breaking">
+                            <p>Flutter Breaking</p>
+                            <a href="https://github.com/wesaminseiw/flutter-breaking-9999" target="_blank">View
+                                Project</a>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/gallerium_icon.png"
-                            alt="Gallerium">
-                        <p>Gallerium</p>
-                        <a href="https://github.com/wesaminseiw/gallerium-2323" target="_blank">View Project</a>
+            </section>
+            <section class="flutter-projects">
+                <div class="projects-container">
+                    <h3>Adobe Illustrator Projects</h3>
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/adobe-illustrator-projects/refs/heads/main/personal-logo/logo-mini-light-rounded.png"
+                                alt="Personal Logo">
+                            <p>Personal Logo Design</p>
+                            <a href="https://github.com/wesaminseiw/adobe-illustrator-projects/tree/main/personal-logo"
+                                target="_blank">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/adobe-illustrator-projects/refs/heads/main/cartee/ui-logos/logo-mini-light-rounded.png"
+                                alt="Cartee Icon">
+                            <p>Cartee Icon Design</p>
+                            <a href="https://github.com/wesaminseiw/adobe-illustrator-projects/tree/main/cartee"
+                                target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <img src="https://raw.githubusercontent.com/wesaminseiw/adobe-illustrator-projects/refs/heads/main/expensium/logo_rounded.png"
+                                alt="Expensium Icon">
+                            <p>Expensium Icon Design</p>
+                            <a href="https://github.com/wesaminseiw/adobe-illustrator-projects/tree/main/expensium"
+                                target="_blank">View
+                                Project</a>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mychat_icon.png"
-                            alt="MyChat">
-                        <p>MyChat</p>
-                        <a href="https://github.com/wesaminseiw/mychat-87e50" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mee_notes_icon.png"
-                            alt="MeeNotes">
-                        <p>MeeNotes</p>
-                        <a href="https://github.com/wesaminseiw/mee-notes-9999" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/mynotes_icon.png"
-                            alt="MyNotes">
-                        <p>MyNotes</p>
-                        <a href="https://github.com/wesaminseiw/mynotes-flutter2928" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/expenses_tracker_icon.png"
-                            alt="Expenses Tracker">
-                        <p>Expenses Tracker</p>
-                        <a href="https://github.com/wesaminseiw/expenses-tracker-1234c" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="https://raw.githubusercontent.com/wesaminseiw/wesaminseiw.github.io/main/images/appicons/flutter_breaking_icon.png"
-                            alt="Flutter Breaking">
-                        <p>Flutter Breaking</p>
-                        <a href="https://github.com/wesaminseiw/flutter-breaking-9999" target="_blank">View Project</a>
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
-
-
-        <!-- <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-grid">
-                    
-                </div>
-            </div>
-        </section> -->
-
         <section id="contact">
             <div class="text-container2">
                 <h2>Contact Me</h2>
